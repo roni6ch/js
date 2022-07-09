@@ -14,8 +14,10 @@ export const request = async ({
 }: ApiProps) => {
     try {
         const response = await fetch(url, { method, headers, body })
-        const data = await response.json();
-        return data;
+        if (!response.ok) {
+            throw new Error('Network response was not ok')
+        }
+        return await response.json();
     } catch (error) {
         return error
     }

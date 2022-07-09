@@ -4,7 +4,7 @@ const CustomHook = () => {
     return <>
         <h1>Custom Hook</h1>
         <h4>share logic code between components using custom hooks</h4>
-        <CounterOne />
+        <CounterOne /> |||
         <CounterTwo />
     </>
 }

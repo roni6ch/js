@@ -38,7 +38,7 @@ export const RQPaginatedQueries = () => {
                 </button>
                 <button
                     onClick={() => setPageNumber(page => page + 1)}
-                    disabled={pageNumber === 3}>
+                    disabled={pageNumber === 4}>
                     Next Page
                 </button>
             </div>

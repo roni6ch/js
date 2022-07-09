@@ -11,14 +11,14 @@ const Context = () => {
         <h1>Context</h1>
         <h4>Pass data through the component tree without having to pass props down manually at every level</h4>
         <Child />
-        <span>{count}</span>
+       
     </CountContext.Provider>
 }
 
 const Child = () => {
-    const { incCount } = useContext(CountContext);
+    const { count, incCount } = useContext(CountContext);
 
-    return <button onClick={incCount}>Child +</button>
+    return <button onClick={incCount}>Child +<span>{count}</span></button>
 }
 
 export default Context;

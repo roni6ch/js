@@ -41,7 +41,6 @@ const HooksLifecycle = () => {
 
     console.log("--------\nParent", count);
     return <>
-
         <h1>HooksLifecycle</h1>
         <h4>open console...</h4>
         <img src="../images/hooks-lifecycle.jpg" alt="hooks-lifecycle" width={900} />
@@ -55,10 +54,10 @@ const HooksLifecycle = () => {
 
 const Child = ({ count }: { count: number }) => {
     console.log("Child", count);
-    return <h1>Hi! {count} </h1>
+    return <h1>Child! {count} </h1>
 }
 
-// shouldComponentpdate()
+// shouldComponentUpdate()
 const MemoizedChild = React.memo(Child, (prevProps, nextProps) => {
     console.log("prevProps", prevProps, " ,nextProps", nextProps);
     return prevProps.count === nextProps.count; // if they are equal => no need to re-render

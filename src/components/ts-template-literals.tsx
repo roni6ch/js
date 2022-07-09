@@ -8,7 +8,8 @@ type templateLiteralType = {
 const TemplateLiterals = () => {
     return <>
         <h1>TemplateLiterals</h1>
-        <Child position={'center'} /></>;
+        <Child position={'center'} />
+    </>;
 }
 
 const Child = ({ position }: templateLiteralType) => {
@@ -30,7 +31,6 @@ const cats: Record<CatName, CatInfo> = {
     gandalf: { age: 5, color: "grey" },
     hit: { age: 16, color: "black & white" },
 };
-console.log(cats.gandalf)
 
 // keyof - return literal type union
 type Point = { x: number; y: number };

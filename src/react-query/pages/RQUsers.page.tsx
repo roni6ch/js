@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Links } from '../../App'
 import { useUsersData, useAddUserData } from '../hooks/useUsersData'
 import { User } from './Users.page'
 
@@ -54,7 +55,7 @@ export const RQUsers = () => {
             <ul>{data?.map((user: User) => {
                 return (
                     <li key={user.name}>
-                        <Link to={`/rq-user/${user.id}`}>
+                        <Link to={`${Links.ReactQuery}/rq-user/${user.id}`}>
                             {user.name} - {user.username}
                         </Link>
                     </li>
