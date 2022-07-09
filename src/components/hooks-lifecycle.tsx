@@ -9,7 +9,7 @@ const HooksLifecycle = () => {
     const willMount = useRef(true);
     if (willMount.current) {
         console.log('This runs only once before rendering the component.');
-        willMount.current = false;        
+        willMount.current = false;
     }
 
     useLayoutEffect(() => {
@@ -41,13 +41,19 @@ const HooksLifecycle = () => {
 
     console.log("--------\nParent", count);
     return <>
+
+        <h1>HooksLifecycle</h1>
+        <h4>open console...</h4>
+        <img src="../images/hooks-lifecycle.jpg" alt="hooks-lifecycle" width={900} />
+        <div>
         <button onClick={() => setCount(count + 1)}> + </button>
         <button onClick={() => setCount(count)}> =</button>
         <MemoizedChild count={count}></MemoizedChild>
+        </div>
     </>
 }
 
-const Child = ({ count }) => {
+const Child = ({ count }: { count: number }) => {
     console.log("Child", count);
     return <h1>Hi! {count} </h1>
 }

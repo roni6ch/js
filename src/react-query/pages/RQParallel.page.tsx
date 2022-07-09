@@ -7,5 +7,5 @@ export const RQParallel = () => {
 
     console.log(queryOne, queryTwo);
 
-    return <div>Parallel Queries</div>
+    return <h1>Parallel Queries</h1>
 }

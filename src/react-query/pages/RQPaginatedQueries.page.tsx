@@ -26,6 +26,7 @@ export const RQPaginatedQueries = () => {
 
     return (
         <>
+            <h1>RQ Paginated Queries</h1>
             <ul>
                 {users?.map((user: User) => user && <li key={user?.id}>{user?.id} {user?.name}</li>)}
             </ul>

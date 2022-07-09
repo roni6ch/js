@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 
-// sharing logic code between components using custom hooks
-
 const CustomHook = () => {
-    return <><CounterOne /><CounterTwo /></>
+    return <>
+        <h1>Custom Hook</h1>
+        <h4>share logic code between components using custom hooks</h4>
+        <CounterOne />
+        <CounterTwo />
+    </>
 }
 
-const useCounter = (initialCount = 0, value) => {
-    const [count, setCount] = useState(initialCount);
+const useCounter = (initialCount: number = 0, value: number): [number, () => void, () => void] => {
+    const [count, setCount] = useState<number>(initialCount);
 
     const increment = () => setCount(count + value);
     const reset = () => setCount(initialCount);
@@ -18,6 +21,7 @@ const useCounter = (initialCount = 0, value) => {
 
 const CounterOne = () => {
     const [count, increment] = useCounter(0, 1);
+
     return <button onClick={increment}>{count}</button>
 }
 
@@ -29,6 +33,5 @@ const CounterTwo = () => {
         <button onClick={reset}>Reset</button>
     </>
 }
-
 
 export default CustomHook;

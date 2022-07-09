@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
 const Cart = () => {
-    const [list, setList] = useState([]);
-    const [value, setValue] = useState("");
+    const [list, setList] = useState<string[]>([]);
+    const [value, setValue] = useState<string>("");
 
     const fetchData = async () => {
         const data = await fetch("https://jsonplaceholder.typicode.com/posts/1/comments").then(res => res.json());
         console.log(data);
-        setList(data.map(item => item.name))
+        setList(data.map((item: { name: string; }) => item.name))
     };
 
     useEffect(() => { fetchData(); }, []);
 
-    const changeHandler = (e) => { setValue(e.target.value); };
+    const changeHandler = (e: any) => { setValue(e.target.value); };
 
     const submitHandler = () => {
         if (value) {
@@ -21,10 +21,12 @@ const Cart = () => {
         }
     };
 
-    const deleteHandler = (item) => { setList(list.filter((ele) => ele !== item)); };
+    const deleteHandler = (item: string) => { setList(list.filter((ele) => ele !== item)); };
 
     return (
         <>
+            <h1>Cart</h1>
+            <h4>Simple example (Add, Remove, Fetch)</h4>
             <label>Add<input value={value} onChange={changeHandler} /></label>
             <button onClick={submitHandler}>+</button>
             <ul> {

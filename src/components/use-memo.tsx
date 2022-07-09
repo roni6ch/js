@@ -1,8 +1,5 @@
 import React, { useState, useMemo } from 'react';
 
-// Returns a memoized value (good for heavy calculations)
-// on each render, isEven needs to recalculate again, this hook keep the old value until his getting changed
-
 const UseMemo = () => {
     const [count, setCount] = useState(0);
     const [countTwo, setCountTwo] = useState(0);
@@ -19,6 +16,8 @@ const UseMemo = () => {
     const incrementTwo = () => setCountTwo(countTwo + 1);
 
     return <>
+        <h1>Use Memo</h1>
+        <h4>memoized value (good for heavy calculations) - on each render, isEven needs to recalculate again, this hook keep the old value until his getting changed</h4>
         <button onClick={incrementOne}> count {count}</button>
         <button onClick={incrementTwo}> countTwo {countTwo}</button>
         <div>{memoizedIsEven ? 'Even' : 'Odd'}</div>

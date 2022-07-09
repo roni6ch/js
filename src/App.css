@@ -25,6 +25,10 @@ span{
   cursor: pointer;
 }
 
+h4 {
+  font-weight: 400;
+}
+
 /* NAV */
 .nav ul {
   list-style-type: none;
@@ -52,5 +56,9 @@ span{
 
 .nav .active {
   background-color: #04AA6D;
+}
+
+.rq-nav ul{
+  background-color: #6f6d6d;
 }
 /* NAV END */

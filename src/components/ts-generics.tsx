@@ -6,7 +6,9 @@ type ListProps<T> = {
 
 const Generics = () => {
     return <>
-        <GenericsMapper items={['John' , 'Jane']} />
+        <h1>Generics</h1>
+        <h4>Typescript - Generic example to same component</h4>
+        <GenericsMapper items={['John', 'Jane']} />
         <GenericsMapper items={[1, 2, 3]} />
     </>
 }
