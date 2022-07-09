@@ -1,24 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+// import ReconciliationRenders from "./components/reconciliation-renders";
+// import HooksLifecycle from "./components/hooks-lifecycle";
+// import RenderProps from "./components/render-props";
+// import Memoization from "./components/memoization";
+// import UseMemo from "./components/use-memo";
+// import UseCallback from "./components/use-callback";
+// import Context from "./components/context";
+// import CustomHook from "./components/custom-hook";
+// import Cart from "./components/cart";
+// import Generics from "./components/ts-generics";
+// import RestrictProps from "./components/ts-restrict-props";
+// import TemplateLiterals from "./components/ts-template-literals";
+import ReactQuery from './react-query/reactQuery';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <ReconciliationRenders />
+      <HooksLifecycle />
+      <Memoization />
+      <UseMemo />
+      <UseCallback />
+      <RenderProps />
+      <Context />
+      <CustomHook />
+      <Cart />
+      <Generics /> 
+      <RestrictProps /> */}
+      {/* <TemplateLiterals /> */}
+      <ReactQuery />
+    </>
   );
 }
 
